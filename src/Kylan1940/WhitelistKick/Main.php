@@ -25,24 +25,25 @@ class Main extends PluginBase implements Listener {
     $prefix = $this->getConfig()->get(self::PREFIX);
     if($sender instanceof Player){
       if($cmd->getName() == "whitelist on"){
-        if($this->getConfig("enable") == true){
+        if($this->getConfig()->getNested('enable') == true){
           foreach ($this->getServer()->getOnlinePlayers() as $player) {
             if ($this->isWhitelisted($player)) continue;
-              $player->kick($this->getConfig("kick-reason"));
+              $player->kick($this->getConfig()->getNested('kick-reason'));
           }
         } 
       }
     }
     if(!$sender instanceof Player){
       if($cmd->getName() == "whitelist on"){
-        if($this->getConfig("enable") == true){
+        if($this->getConfig()->getNested('enable') == true){
           foreach ($this->getServer()->getOnlinePlayers() as $player) {
           if ($this->isWhitelisted($player)) continue;
-            $player->kick($this->getConfig("kick-reason"));
+            $player->kick($this->getConfig()->getNested('kick-reason'));
           }
         } 
       }
 	  }
+	  return true;
 	}
 	
 }
