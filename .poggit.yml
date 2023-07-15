@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Kylan1940/WhitelistKick
+build-by-default: true
+branches:
+- main
+projects:
+  WhitelistKick:
+    path: ""
+    icon: "icon.png"
+...
