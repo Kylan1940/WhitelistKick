@@ -8,6 +8,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\console\ConsoleCommandSender;
 use pocketmine\event\Listener;
+use pocketmine\permission\DefaultPermissions;
 use pocketmine\utils\TextFormat;
 use Kylan1940\WhitelistKick\UpdateNotifier\ConfigUpdater;
 
@@ -27,7 +28,7 @@ class Main extends PluginBase implements Listener {
       if($cmd->getName() == "whitelist on"){
         if($this->getConfig()->getNested('enable') == true){
           foreach ($this->getServer()->getOnlinePlayers() as $player) {
-            if ($this->isWhitelisted($player)) continue;
+            if ($this->Whitelist($player)) continue;
               $player->kick($this->getConfig()->getNested('kick-reason'));
           }
         } 
@@ -37,7 +38,7 @@ class Main extends PluginBase implements Listener {
       if($cmd->getName() == "whitelist on"){
         if($this->getConfig()->getNested('enable') == true){
           foreach ($this->getServer()->getOnlinePlayers() as $player) {
-          if ($this->isWhitelisted($player)) continue;
+          if ($this->Whitelist($player)) continue;
             $player->kick($this->getConfig()->getNested('kick-reason'));
           }
         } 
@@ -45,5 +46,11 @@ class Main extends PluginBase implements Listener {
 	  }
 	  return true;
 	}
+	
+	public function Whitelist(Player $player) : bool {
+    if ($player->hasPermission(DefaultPermissions::ROOT_OPERATOR)) return true;
+    $this->getServer()->getWhitelisted()->reload();
+    return in_array(strtolower($player->getName()), array_keys($this->getServer()->getWhitelisted()->getAll()));
+  }
 	
 }
