@@ -1,0 +1,34 @@
+# ===========================================================================
+# ╭╮╭╮╭┳╮╱╱╭╮╱╱╱╭╮╱╱╱╱╭╮╭╮╭━╮╱╱╱╭╮
+# ┃┃┃┃┃┃┃╱╭╯╰╮╱╱┃┃╱╱╱╭╯╰┫┃┃╭╯╱╱╱┃┃
+# ┃┃┃┃┃┃╰━╋╮╭╋━━┫┃╭┳━┻╮╭┫╰╯╯╭┳━━┫┃╭╮
+# ┃╰╯╰╯┃╭╮┣┫┃┃┃━┫┃┣┫━━┫┃┃╭╮┃┣┫╭━┫╰╯╯
+# ╰╮╭╮╭┫┃┃┃┃╰┫┃━┫╰┫┣━━┃╰┫┃┃╰┫┃╰━┫╭╮╮
+# ╱╰╯╰╯╰╯╰┻┻━┻━━┻━┻┻━━┻━┻╯╰━┻┻━━┻╯╰╯
+# ===========================================================================
+# Report Plugin: https://github.com/Kylan1940/WhitelistKick/issues/new
+# ===========================================================================
+# Become a Patron: https://patreon.com/Kylan1940
+# Github: https://github.com/Kylan1940
+# Website: https://web.kylan1940.online
+# Discord Community: https://discord.io/kylancommunity
+# ===========================================================================
+
+# CONFIGURATION
+#
+# HELP:
+# \n for new line
+# § for color and special symbols
+
+# Config Version
+# DO NOT CHANGE THIS!!!
+config-version: 1
+
+# Prefix
+prefix: "§7[§eWhitelistKick§7] "
+
+# Enable Kick
+enable: true
+
+# Message
+kick-reason: "§aServer is being whitelist"
