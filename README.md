@@ -1,3 +1,5 @@
+[![](https://poggit.pmmp.io/shield.state/WhitelistKick)](https://poggit.pmmp.io/p/WhitelistKick)
+[![](https://poggit.pmmp.io/shield.api/WhitelistKick)](https://poggit.pmmp.io/p/WhitelistKick)
 [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/Kylan1940)
 ![Discord Banner 1](https://discordapp.com/api/guilds/1121026138525945956/widget.png?style=banner1)
 
